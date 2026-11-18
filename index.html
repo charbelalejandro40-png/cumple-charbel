@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chaar D. Boy - 23 Años | Maranello</title>
-    <!-- Fuentes estilo San Andreas (Abril Fatface / Anton) y Vice City (Yellowtail / Pacifico) -->
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Cinzel:wght@700;900&family=Montserrat:wght@600;800;900&family=Yellowtail&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -27,7 +26,6 @@
             position: relative;
         }
 
-        /* Tipografía estilo San Andreas (borde negro grueso) */
         .font-sa {
             font-family: 'Anton', sans-serif;
             letter-spacing: 2px;
@@ -41,7 +39,6 @@
                  0px  4px 10px rgba(0,0,0,0.8);
         }
 
-        /* Tipografía estilo Vice City (cursiva neón) */
         .font-vc {
             font-family: 'Yellowtail', cursive;
             color: var(--neon-pink);
@@ -49,7 +46,6 @@
             font-weight: 400;
         }
 
-        /* Pantalla inicial */
         #welcome-screen {
             position: fixed;
             inset: 0;
@@ -102,7 +98,6 @@
             100% { transform: scale(1); }
         }
 
-        /* Stickers flotantes de fondo (Armas, Dinero, Palmeras) */
         .bg-sticker {
             position: fixed;
             z-index: 1;
@@ -134,7 +129,6 @@
             position: relative;
         }
 
-        /* Estrellas de búsqueda + Dinero GTA arriba */
         .hud-bar {
             display: flex;
             justify-content: space-between;
@@ -172,7 +166,6 @@
             transform: rotate(-2deg);
         }
 
-        /* CARTEL WANTED ONE PIECE */
         .one-piece-poster {
             background: linear-gradient(145deg, #f3e2c7, #dcc094);
             color: #2b1d0e;
@@ -255,7 +248,6 @@
             50% { transform: translateY(-10px); }
         }
 
-        /* CHARIZARD ANCLADO FLOTANDO POR FUERA */
         .floating-charizard {
             position: fixed;
             bottom: 15px;
@@ -297,7 +289,6 @@
             white-space: nowrap;
         }
 
-        /* Panel de Stickers de Armas y Dinero estilo HUD de GTA */
         .stickers-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -338,7 +329,6 @@
             text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         }
 
-        /* Cuenta regresiva */
         .countdown-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -363,7 +353,6 @@
 
         .time-label { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: #ccc; }
 
-        /* Datos */
         .info-item {
             display: flex;
             align-items: center;
@@ -393,7 +382,6 @@
             box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
         }
 
-        /* Encuesta Rumba */
         .rumba-option {
             display: block;
             background: rgba(255, 42, 133, 0.15);
@@ -412,7 +400,6 @@
             box-shadow: 0 0 15px var(--neon-pink);
         }
 
-        /* Lista de Regalos */
         .gift-option {
             display: flex;
             align-items: center;
@@ -432,7 +419,6 @@
             background: rgba(46, 204, 113, 0.18);
         }
 
-        /* Galería */
         .gallery-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -448,7 +434,6 @@
             border: 2px solid var(--neon-pink);
         }
 
-        /* Botón WhatsApp */
         .btn-whatsapp {
             display: block;
             width: 100%;
@@ -499,21 +484,19 @@
 </head>
 <body>
 
-    <!-- Stickers flotantes decorativos de fondo -->
     <div class="bg-sticker st-1">💵</div>
     <div class="bg-sticker st-2">🔫</div>
     <div class="bg-sticker st-3">🌴</div>
     <div class="bg-sticker st-4">💰</div>
 
-    <!-- Audios -->
+    <!-- Audios con doble extensión .mp3.mp3 -->
     <audio id="bg-music" loop>
-        <source src="cafecito.mp3" type="audio/mpeg">
+        <source src="cafecito.mp3.mp3" type="audio/mpeg">
     </audio>
     <audio id="charizard-music">
-        <source src="macacoa.mp3" type="audio/mpeg">
+        <source src="macacoa.mp3.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- Pantalla Inicial -->
     <div id="welcome-screen">
         <div class="font-sa welcome-sa">SAN ANDREAS</div>
         <div class="font-vc welcome-vc">Vice City Nights</div>
@@ -521,17 +504,14 @@
         <button class="enter-btn" onclick="startExperience()">▶ Entrar</button>
     </div>
 
-    <!-- CHARIZARD ANCLADO FLOTANDO POR FUERA -->
     <div class="floating-charizard" id="charizard-widget" onclick="playMacacoa()">
         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png" alt="Charizard">
         <div class="charizard-badge" id="charizard-status">🔥 Tócame</div>
     </div>
 
-    <!-- Botón de audio -->
     <button class="music-control" id="mute-btn" onclick="toggleAudio()">🔊</button>
 
     <div class="container">
-        <!-- Cabecera + HUD GTA + Cartel Wanted -->
         <div class="section-card">
             <div class="hud-bar">
                 <div class="hud-money">$23,000,000</div>
@@ -544,7 +524,7 @@
             <div class="one-piece-poster">
                 <div class="op-header">WANTED</div>
                 <div class="op-photo-frame">
-                    <img src="foto1.jpg" alt="Chaar D. Boy" onerror="this.src='https://via.placeholder.com/350x270/2b1d0e/f3e2c7?text=foto1.jpg'">
+                    <img src="foto1.jpeg" alt="Chaar D. Boy" onerror="this.src='https://via.placeholder.com/350x270/2b1d0e/f3e2c7?text=foto1.jpeg'">
                 </div>
                 <div class="op-sub">DEAD OR ALIVE</div>
                 <div class="op-name">CHAAR D. BOY</div>
@@ -558,7 +538,6 @@
             <p style="text-align: center; font-weight: 800; color: #00f0ff;">Un cafecito riquito riquito, una sonrisita bonita bonita ☕😁</p>
         </div>
 
-        <!-- Stickers de Armas, Dinero y Calle (Estilo HUD GTA) -->
         <div class="section-card">
             <div class="section-heading">
                 <span class="font-sa">RESPECT +</span>
@@ -592,7 +571,6 @@
             </div>
         </div>
 
-        <!-- Cuenta Regresiva -->
         <div class="section-card">
             <div class="section-heading">
                 <span class="font-sa">MISSION TIME</span>
@@ -606,7 +584,6 @@
             </div>
         </div>
 
-        <!-- Datos del Evento -->
         <div class="section-card">
             <div class="section-heading">
                 <span class="font-sa">COORDENADAS</span>
@@ -619,7 +596,6 @@
             <a href="https://maps.app.goo.gl/UyM8dwLqQPf8Y5zWA" target="_blank" class="btn-map">🗺️ Abrir ubicación en Maps</a>
         </div>
 
-        <!-- Mensaje Especial / Encuesta Rumba -->
         <div class="section-card">
             <div class="section-heading">
                 <span class="font-sa">MENSAJE ESPECIAL</span>
@@ -631,19 +607,17 @@
             <div class="rumba-option" onclick="selectRumba(this, 'Opción C: Por supuesto')">Opción C) Por supuesto</div>
         </div>
 
-        <!-- Galería -->
         <div class="section-card">
             <div class="section-heading">
                 <span class="font-sa">ARCHIVOS</span>
                 <span class="font-vc">Galería</span>
             </div>
             <div class="gallery-grid">
-                <img src="foto2.jpg" alt="Foto 2" onerror="this.src='https://via.placeholder.com/250x190/1a0b2e/ff2a85?text=foto2.jpg'">
-                <img src="foto3.jpg" alt="Foto 3" onerror="this.src='https://via.placeholder.com/250x190/1a0b2e/ff2a85?text=foto3.jpg'">
+                <img src="foto2.jpeg" alt="Foto 2" onerror="this.src='https://via.placeholder.com/250x190/1a0b2e/ff2a85?text=foto2.jpeg'">
+                <img src="foto3.jpeg" alt="Foto 3" onerror="this.src='https://via.placeholder.com/250x190/1a0b2e/ff2a85?text=foto3.jpeg'">
             </div>
         </div>
 
-        <!-- Lista de Regalos -->
         <div class="section-card">
             <div class="section-heading">
                 <span class="font-sa">EL BOTÍN</span>
@@ -669,7 +643,6 @@
             </div>
         </div>
 
-        <!-- Confirmación WhatsApp -->
         <a href="#" id="whatsapp-link" target="_blank" class="btn-whatsapp" onclick="sendWhatsApp(event)">
             ✅ Confirmar por WhatsApp
         </a>
