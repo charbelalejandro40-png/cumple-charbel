@@ -615,7 +615,7 @@
                 <span class="font-vc">Rafa's Casual Food</span>
             </div>
             <div class="info-item">📅 <div><strong>Fecha:</strong> Viernes, 20 de Noviembre</div></div>
-            <div class="info-item">🕢 <div><strong>Hora:</strong> 7:30 PM</div></div>
+            <div class="info-item">🕢 <div><strong>Hora:</strong> 6:50 PM</div></div>
             <div class="info-item punctual-alert">⚠️ <div><strong>¡OJO! Sé puntual</strong> o si no nos bailan las mesas 🪑💨</div></div>
             <div class="info-item">🍔 <div><strong>Lugar:</strong> Rafa's Casual Food</div></div>
             <div class="info-item">🕶️ <div><strong>Código de vestimenta:</strong> Guapo</div></div>
@@ -736,12 +736,13 @@
         function sendWhatsApp(e) {
             e.preventDefault();
             const phone = "584143738828";
-            const text = `¡Qué onda Chaar D. Boy! 🏴‍☠️🔥 Voy puntual para tus 23 años en Rafa's Casual Food este viernes 20 a las 7:30 PM.\n\n🕶️ Dress code: Guapo\n🍻 ¿Rumba después de la cena?: ${selectedRumba}\n🎁 Mi regalo: ${selectedGift}`;
+            const text = `¡Qué onda Chaar D. Boy! 🏴‍☠️🔥 Voy puntual para tus 23 años en Rafa's Casual Food este viernes 20 a las 6:50 PM.\n\n🕶️ Dress code: Guapo\n🍻 ¿Rumba después de la cena?: ${selectedRumba}\n🎁 Mi regalo: ${selectedGift}`;
             const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
             window.open(url, '_blank');
         }
 
-        const targetDate = new Date(2026, 10, 20, 19, 30, 0).getTime();
+        // Cuenta Regresiva: 20 de Noviembre de 2026 a las 6:50 PM (18:50)
+        const targetDate = new Date(2026, 10, 20, 18, 50, 0).getTime();
 
         setInterval(() => {
             const now = new Date().getTime();
