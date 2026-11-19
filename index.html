@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chaar D. Boy - 23 Años | Maranello</title>
+    <title>Chaar D. Boy - 23 Años | Rafa's Casual Food</title>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Cinzel:wght@700;900&family=Montserrat:wght@600;800;900&family=Yellowtail&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -365,6 +365,14 @@
             border-left: 4px solid var(--neon-pink);
         }
 
+        .punctual-alert {
+            background: rgba(255, 107, 0, 0.18);
+            border: 1.5px solid #ff6b00;
+            border-left: 5px solid #ff6b00;
+            color: #ffd700;
+            font-weight: 800;
+        }
+
         .btn-map {
             display: block;
             width: 100%;
@@ -380,6 +388,24 @@
             margin-top: 10px;
             text-transform: uppercase;
             box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+        }
+
+        .btn-linktree {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: linear-gradient(90deg, #ff6b00, #ff2a85);
+            color: #fff;
+            font-family: 'Anton', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            padding: 13px;
+            border-radius: 12px;
+            margin-top: 10px;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px rgba(255, 42, 133, 0.45);
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000;
         }
 
         .rumba-option {
@@ -489,7 +515,6 @@
     <div class="bg-sticker st-3">🌴</div>
     <div class="bg-sticker st-4">💰</div>
 
-    <!-- Audios con doble extensión .mp3.mp3 -->
     <audio id="bg-music" loop>
         <source src="cafecito.mp3.mp3" type="audio/mpeg">
     </audio>
@@ -587,13 +612,15 @@
         <div class="section-card">
             <div class="section-heading">
                 <span class="font-sa">COORDENADAS</span>
-                <span class="font-vc">Maranello</span>
+                <span class="font-vc">Rafa's Casual Food</span>
             </div>
             <div class="info-item">📅 <div><strong>Fecha:</strong> Viernes, 20 de Noviembre</div></div>
             <div class="info-item">🕢 <div><strong>Hora:</strong> 7:30 PM</div></div>
-            <div class="info-item">🍝 <div><strong>Lugar:</strong> Maranello</div></div>
+            <div class="info-item punctual-alert">⚠️ <div><strong>¡OJO! Sé puntual</strong> o si no nos bailan las mesas 🪑💨</div></div>
+            <div class="info-item">🍔 <div><strong>Lugar:</strong> Rafa's Casual Food</div></div>
             <div class="info-item">🕶️ <div><strong>Código de vestimenta:</strong> Guapo</div></div>
-            <a href="https://maps.app.goo.gl/UyM8dwLqQPf8Y5zWA" target="_blank" class="btn-map">🗺️ Abrir ubicación en Maps</a>
+            <a href="https://maps.app.goo.gl/UddnAi76mAzNDcxKA" target="_blank" class="btn-map">🗺️ Abrir ubicación en Maps</a>
+            <a href="https://linktr.ee/rafascasualfood" target="_blank" class="btn-linktree">🍔 Ver Menú y Redes (Linktree)</a>
         </div>
 
         <div class="section-card">
@@ -709,7 +736,7 @@
         function sendWhatsApp(e) {
             e.preventDefault();
             const phone = "584143738828";
-            const text = `¡Qué onda Chaar D. Boy! 🏴‍☠️🔥 Voy para tus 23 años en Maranello este viernes 20 a las 7:30 PM.\n\n🕶️ Dress code: Guapo\n🍻 ¿Rumba después de la cena?: ${selectedRumba}\n🎁 Mi regalo: ${selectedGift}`;
+            const text = `¡Qué onda Chaar D. Boy! 🏴‍☠️🔥 Voy puntual para tus 23 años en Rafa's Casual Food este viernes 20 a las 7:30 PM.\n\n🕶️ Dress code: Guapo\n🍻 ¿Rumba después de la cena?: ${selectedRumba}\n🎁 Mi regalo: ${selectedGift}`;
             const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
             window.open(url, '_blank');
         }
@@ -721,7 +748,7 @@
             const diff = targetDate - now;
 
             if (diff <= 0) {
-                document.querySelector('.countdown-grid').innerHTML = "<h3 style='grid-column: span 4; color: #00f0ff;'>¡HOY ES EN MARANELLO! 🔥🍻</h3>";
+                document.querySelector('.countdown-grid').innerHTML = "<h3 style='grid-column: span 4; color: #00f0ff;'>¡HOY ES EN RAFA'S CASUAL FOOD! 🔥🍻</h3>";
                 return;
             }
 
